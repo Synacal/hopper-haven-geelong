@@ -17,30 +17,30 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <WavyDivider className="mx-auto mb-6 w-24 opacity-80" color="#f5f0e8" />
-          <h1 className="font-heading text-5xl md:text-7xl font-bold text-[hsl(40,33%,96%)] mb-4 tracking-tight">
-            Coco Loco
-          </h1>
-          <p className="font-heading text-xl md:text-2xl text-[hsl(40,30%,88%)] mb-2 italic">
+          <GoldLine className="mx-auto mb-8 w-20" />
+          <p className="font-body text-xs md:text-sm uppercase tracking-[0.35em] text-primary mb-4 font-medium">
             Geelong's 1st Hopper Bar
           </p>
-          <p className="font-body text-lg text-[hsl(40,30%,82%)] mb-8">
+          <h1 className="font-heading text-6xl md:text-8xl font-bold text-foreground mb-6 tracking-tight leading-none">
+            Coco Loco
+          </h1>
+          <p className="font-body text-base md:text-lg text-muted-foreground mb-10 tracking-wide">
             Hoppers · Toasties · Wellness Blends
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#menu"
-              className="inline-block bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-lg hover:opacity-90 transition-opacity"
+              className="inline-block bg-primary text-primary-foreground px-10 py-4 font-body font-semibold text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
             >
               View Menu
             </a>
             <a
-              href="#visit"
-              className="inline-block border-2 border-[hsl(40,33%,96%)] text-[hsl(40,33%,96%)] px-8 py-3.5 rounded-full font-body font-semibold text-lg hover:bg-[hsl(40,33%,96%)]/10 transition-colors"
+              href="#order"
+              className="inline-block border border-primary text-primary px-10 py-4 font-body font-semibold text-sm uppercase tracking-widest hover:bg-primary/10 transition-colors"
             >
-              Visit Us
+              Order Now
             </a>
           </div>
         </motion.div>
@@ -49,9 +49,9 @@ const HeroSection = () => {
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
+        transition={{ repeat: Infinity, duration: 2.5 }}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="hsl(40,33%,96%)" strokeWidth="2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="hsl(38,60%,55%)" strokeWidth="1.5">
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
       </motion.div>
@@ -59,11 +59,11 @@ const HeroSection = () => {
   );
 };
 
-const WavyDivider = ({ className = "", color = "currentColor" }: { className?: string; color?: string }) => (
-  <svg viewBox="0 0 120 20" className={className} xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 10 Q15 2 30 10 Q45 18 60 10 Q75 2 90 10 Q105 18 120 10" stroke={color} fill="none" strokeWidth="2.5" />
-  </svg>
+const GoldLine = ({ className = "" }: { className?: string }) => (
+  <div className={className}>
+    <div className="h-px bg-primary w-full" />
+  </div>
 );
 
 export default HeroSection;
-export { WavyDivider };
+export { GoldLine };

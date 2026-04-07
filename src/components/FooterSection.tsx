@@ -1,17 +1,20 @@
-import { WavyDivider } from "./HeroSection";
+import { GoldLine } from "./HeroSection";
 import { MapPin, Clock, Mail, Phone, Instagram } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer id="visit" className="bg-foreground text-primary-foreground">
-      <div className="py-24 px-4">
+    <footer id="visit" className="bg-card border-t border-border">
+      <div className="py-28 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <WavyDivider className="w-16 mx-auto mb-6" color="hsl(145, 25%, 42%)" />
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            <GoldLine className="w-12 mx-auto mb-8" />
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-4 font-medium">
+              Find Us
+            </p>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
               Visit Us
             </h2>
-            <p className="font-body text-lg opacity-70">
+            <p className="font-body text-base text-muted-foreground">
               We can't wait to share the flavours of Sri Lanka with you.
             </p>
           </div>
@@ -19,47 +22,45 @@ const FooterSection = () => {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="space-y-6">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-1 shrink-0 text-primary" />
+                <MapPin className="w-4 h-4 mt-1 shrink-0 text-primary" />
                 <div>
-                  <p className="font-body font-semibold mb-1">Location</p>
-                  <p className="font-body opacity-70">Geelong, VIC<br />Australia</p>
+                  <p className="font-body text-sm font-semibold text-foreground mb-1">Location</p>
+                  <p className="font-body text-sm text-muted-foreground">Geelong, VIC<br />Australia</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 mt-1 shrink-0 text-primary" />
+                <Clock className="w-4 h-4 mt-1 shrink-0 text-primary" />
                 <div>
-                  <p className="font-body font-semibold mb-1">Opening Hours</p>
-                  <p className="font-body opacity-70">
-                    Coming Soon — Est. 2026
-                  </p>
+                  <p className="font-body text-sm font-semibold text-foreground mb-1">Opening Hours</p>
+                  <p className="font-body text-sm text-muted-foreground">Coming Soon — Est. 2026</p>
                 </div>
               </div>
             </div>
 
             <div className="space-y-6">
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-1 shrink-0 text-primary" />
+                <Mail className="w-4 h-4 mt-1 shrink-0 text-primary" />
                 <div>
-                  <p className="font-body font-semibold mb-1">Email</p>
-                  <p className="font-body opacity-70">hello@cocoloco.com.au</p>
+                  <p className="font-body text-sm font-semibold text-foreground mb-1">Email</p>
+                  <p className="font-body text-sm text-muted-foreground">hello@cocoloco.com.au</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 mt-1 shrink-0 text-primary" />
+                <Phone className="w-4 h-4 mt-1 shrink-0 text-primary" />
                 <div>
-                  <p className="font-body font-semibold mb-1">Phone</p>
-                  <p className="font-body opacity-70">Coming soon</p>
+                  <p className="font-body text-sm font-semibold text-foreground mb-1">Phone</p>
+                  <p className="font-body text-sm text-muted-foreground">Coming soon</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Instagram className="w-5 h-5 mt-1 shrink-0 text-primary" />
+                <Instagram className="w-4 h-4 mt-1 shrink-0 text-primary" />
                 <div>
-                  <p className="font-body font-semibold mb-1">Instagram</p>
+                  <p className="font-body text-sm font-semibold text-foreground mb-1">Instagram</p>
                   <a
                     href="https://www.instagram.com/cocoloco_geelong/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-body opacity-70 hover:opacity-100 transition-opacity"
+                    className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     @cocoloco_geelong
                   </a>
@@ -68,8 +69,8 @@ const FooterSection = () => {
             </div>
 
             <div>
-              <p className="font-body font-semibold mb-3">Stay Updated</p>
-              <p className="font-body text-sm opacity-70 mb-4">
+              <p className="font-body text-sm font-semibold text-foreground mb-3">Stay Updated</p>
+              <p className="font-body text-sm text-muted-foreground mb-4">
                 Get updates on our grand opening and special events.
               </p>
               <form
@@ -79,11 +80,11 @@ const FooterSection = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="bg-primary-foreground/10 border border-primary-foreground/20 rounded-full px-5 py-3 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="bg-muted border border-border px-5 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                 />
                 <button
                   type="submit"
-                  className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-body font-semibold text-sm hover:opacity-90 transition-opacity"
+                  className="bg-primary text-primary-foreground px-6 py-3 font-body font-semibold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity"
                 >
                   Notify Me
                 </button>
@@ -93,10 +94,10 @@ const FooterSection = () => {
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10 py-6 px-4">
+      <div className="border-t border-border py-6 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-heading text-xl font-bold">Coco Loco</p>
-          <p className="font-body text-sm opacity-50">
+          <p className="font-heading text-xl font-bold text-foreground">Coco Loco</p>
+          <p className="font-body text-xs text-muted-foreground tracking-wider">
             © 2026 Coco Loco Geelong. All rights reserved.
           </p>
         </div>
